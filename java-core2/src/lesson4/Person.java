@@ -19,6 +19,16 @@ public class Person {
         System.out.println("hello from " + name + " " + age);
     }
 
+    void changeAge(boolean isAdult, int age) {
+        age += 1;
+    }
+
+    void changeAge(int age, boolean isAdult) {
+        if (isAdult) {
+            age += 1;
+        }
+    }
+
     public int getAge() {
         return age;
     }
