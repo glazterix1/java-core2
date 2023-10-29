@@ -1,8 +1,10 @@
 package lesson5;
 
 public class Rectangle {
+    static final String NAME = "Rectangle";
     int sideX;
-    int sideY;
+    private int sideY;
+    static int count;
 
 //    Rectangle() {
 //
@@ -17,15 +19,26 @@ public class Rectangle {
     Rectangle(int sideX, int sideY) {
         this.sideX = sideX;
         this.sideY = sideY;
+        count++;
     }
 
     int square() {
         return sideX * sideY;
     }
 
-    void setSides(int newSideX, int newSideY) {
-        sideX = newSideX;
-        sideY = newSideY;
+//    void setSides(int newSideX, int newSideY) {
+//    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public int getSideX() {
+        return sideX;
+    }
+
+    public int getSideY() {
+        return sideY;
     }
 
     @Override
