@@ -1,6 +1,6 @@
 package lesson6;
 
-abstract class Figure {
+abstract class Figure extends Object {
     private int sideX;
     private int sideY;
 

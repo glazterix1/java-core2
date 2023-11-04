@@ -1,6 +1,6 @@
 package lesson6;
 
-public class Triangle extends Figure {
+public class Triangle extends Figure implements Visible {
     int sideZ;
 
     public Triangle() {
@@ -30,6 +30,11 @@ public class Triangle extends Figure {
                 "sideX=" + getSideX() +
                 "sideY=" + getSideY() +
                 '}';
+    }
+
+    @Override
+    public boolean isVisible() {
+        return false;
     }
 }
 
