@@ -16,6 +16,8 @@ public class InheritanceRunner {
         Figure figure = new Triangle(22, 22, 22);
         Figure figure2 = new Rectangle(22, 22);
 
+        "Hello".equals("Hello");
+
 //        triangle.square();
 //        rectangle.square();
 
