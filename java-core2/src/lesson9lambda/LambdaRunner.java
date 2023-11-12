@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9lambda;
 
 
 import java.util.Arrays;
