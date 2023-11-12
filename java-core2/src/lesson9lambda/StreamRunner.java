@@ -1,6 +1,9 @@
 package lesson9lambda;
 
+import lesson9exception.UserNotFoundException;
+
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -29,5 +32,19 @@ public class StreamRunner {
                 .filter((Dish dish) -> dish.getCalories() < 400)
                 .map((Dish dish) -> dish.getName())
                 .collect(Collectors.toSet());
+
+        // Optional
+        Optional<Integer> optional = menu.stream()
+                .filter((Dish dish) -> dish.getCalories() < 400)
+                .map(dish -> dish.getCalories())
+                .reduce(Integer::sum);
+
+        System.out.println(optional.get());
+
+//        System.out.println(optional.orElseThrow(() -> new UserNotFoundException()));
+//        System.out.println(optional.isPresent());
+//        System.out.println(optional.get());
+//
+//        optional.ifPresent(integer -> System.out.println(integer));
     }
 }
