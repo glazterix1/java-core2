@@ -1,13 +1,17 @@
 package lesson10multithreading;
 
-public class Counter {
-    int userCounter = 0;
+import java.util.concurrent.atomic.AtomicInteger;
 
-    synchronized void increment() {
-        userCounter++;
+public class Counter {
+    volatile boolean flag = false;
+
+    AtomicInteger userCounter = new AtomicInteger(0);
+
+    void increment() {
+        userCounter.incrementAndGet();
     }
 
     public int getUserCounter() {
-        return userCounter;
+        return userCounter.get();
     }
 }

@@ -8,6 +8,7 @@ public class ExecutorsRunner {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         ExecutorService executorService1 = Executors.newSingleThreadExecutor();
         ExecutorService executorService2 = Executors.newCachedThreadPool();
+        ExecutorService executorService3 = Executors.newWorkStealingPool();
 
         executorService.submit(() -> System.out.println(Thread.currentThread().getName()));
         executorService.submit(() -> System.out.println(Thread.currentThread().getName()));

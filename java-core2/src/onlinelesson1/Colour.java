@@ -1,4 +1,4 @@
-package onlinelesson;
+package onlinelesson1;
 
 public enum Colour {
     RED(255, 0, 0),

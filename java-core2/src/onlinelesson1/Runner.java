@@ -1,4 +1,4 @@
-package onlinelesson;
+package onlinelesson1;
 
 public class Runner {
     public static void main(String[] args) {
