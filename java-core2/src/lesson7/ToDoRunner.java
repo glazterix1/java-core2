@@ -5,5 +5,10 @@ public class ToDoRunner {
         ToDo toDo = new ToDo();
 
         toDo.add( "Buy milk", 20);
+        toDo.add( "Drink coffee", 1);
+        toDo.add( "Play guitar", 4);
+        toDo.add( "Listen music", 20);
+
+        toDo.listAll();
     }
 }

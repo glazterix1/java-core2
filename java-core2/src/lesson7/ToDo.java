@@ -4,40 +4,49 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ToDo {
-    List<String> delos = new ArrayList<>();
+    List<String> todos = new ArrayList<>();
 
-    void add(String delo) {
-        delos.add(delo);
+    void add(String somethingTodo) {
+        todos.add(somethingTodo);
     }
 
-    void add(String delo, int index) {
-        if (index > delos.size()) {
-            delos.add(delo);
+    void add(String somethingTodo, int index) {
+        if (index > todos.size()) {
+            todos.add(somethingTodo);
         } else {
-            delos.add(index, delo);
+            todos.add(index, somethingTodo);
         }
     }
 
-    void edit(int index, String delo) {
-        if (index > delos.size() - 1) {
+    void edit(int index, String somethingTodo) {
+        if (index > todos.size() - 1) {
             System.out.println("Дело не было заменено");
         } else {
-            delos.set(index, delo);
+            todos.set(index, somethingTodo);
         }
     }
 
     void delete(int index) {
-        if (index > delos.size() - 1) {
+        if (index > todos.size() - 1) {
             System.out.println("Дело не было удалено");
         } else {
-            delos.remove(index);
+            todos.remove(index);
         }
+    }
+
+    void listAll() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < todos.size(); i++) {
+            stringBuilder.append(String.format("%d - %s", i, todos.get(i)));
+            stringBuilder.append("\n");
+        }
+        System.out.println(stringBuilder);
     }
 
     @Override
     public String toString() {
         return "ToDo{" +
-                "delos=" + delos +
+                "todos=" + todos +
                 '}';
     }
 }
