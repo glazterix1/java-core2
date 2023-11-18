@@ -49,4 +49,8 @@ public class ToDo {
                 "todos=" + todos +
                 '}';
     }
+
+    public List<String> getTodos() {
+        return todos;
+    }
 }
